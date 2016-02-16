@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C621577D1C73672100DA20E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577C1C73672100DA20E3 /* AppDelegate.swift */; };
+		C621577F1C73672100DA20E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577E1C73672100DA20E3 /* ViewController.swift */; };
+		C62157821C73672100DA20E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62157801C73672100DA20E3 /* Main.storyboard */; };
+		C62157851C73672100DA20E3 /* iTao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C62157831C73672100DA20E3 /* iTao.xcdatamodeld */; };
+		C62157871C73672100DA20E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62157861C73672100DA20E3 /* Assets.xcassets */; };
+		C621578A1C73672100DA20E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62157881C73672100DA20E3 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C62157791C73672100DA20E3 /* iTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C621577C1C73672100DA20E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C621577E1C73672100DA20E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C62157811C73672100DA20E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C62157841C73672100DA20E3 /* iTao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTao.xcdatamodel; sourceTree = "<group>"; };
+		C62157861C73672100DA20E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C62157891C73672100DA20E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C621578B1C73672100DA20E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C62157761C73672100DA20E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C62157701C73672100DA20E3 = {
+			isa = PBXGroup;
+			children = (
+				C621577B1C73672100DA20E3 /* iTao */,
+				C621577A1C73672100DA20E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C621577A1C73672100DA20E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C62157791C73672100DA20E3 /* iTao.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C621577B1C73672100DA20E3 /* iTao */ = {
+			isa = PBXGroup;
+			children = (
+				C621577C1C73672100DA20E3 /* AppDelegate.swift */,
+				C621577E1C73672100DA20E3 /* ViewController.swift */,
+				C62157801C73672100DA20E3 /* Main.storyboard */,
+				C62157861C73672100DA20E3 /* Assets.xcassets */,
+				C62157881C73672100DA20E3 /* LaunchScreen.storyboard */,
+				C621578B1C73672100DA20E3 /* Info.plist */,
+				C62157831C73672100DA20E3 /* iTao.xcdatamodeld */,
+			);
+			path = iTao;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C62157781C73672100DA20E3 /* iTao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C621578E1C73672100DA20E3 /* Build configuration list for PBXNativeTarget "iTao" */;
+			buildPhases = (
+				C62157751C73672100DA20E3 /* Sources */,
+				C62157761C73672100DA20E3 /* Frameworks */,
+				C62157771C73672100DA20E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTao;
+			productName = iTao;
+			productReference = C62157791C73672100DA20E3 /* iTao.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C62157711C73672100DA20E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Norbert Grover";
+				TargetAttributes = {
+					C62157781C73672100DA20E3 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C62157741C73672100DA20E3 /* Build configuration list for PBXProject "iTao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C62157701C73672100DA20E3;
+			productRefGroup = C621577A1C73672100DA20E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C62157781C73672100DA20E3 /* iTao */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C62157771C73672100DA20E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C621578A1C73672100DA20E3 /* LaunchScreen.storyboard in Resources */,
+				C62157871C73672100DA20E3 /* Assets.xcassets in Resources */,
+				C62157821C73672100DA20E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C62157751C73672100DA20E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C621577F1C73672100DA20E3 /* ViewController.swift in Sources */,
+				C62157851C73672100DA20E3 /* iTao.xcdatamodeld in Sources */,
+				C621577D1C73672100DA20E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C62157801C73672100DA20E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62157811C73672100DA20E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C62157881C73672100DA20E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62157891C73672100DA20E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C621578C1C73672100DA20E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C621578D1C73672100DA20E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C621578F1C73672100DA20E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iTao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.iTao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C62157901C73672100DA20E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iTao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.iTao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C62157741C73672100DA20E3 /* Build configuration list for PBXProject "iTao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C621578C1C73672100DA20E3 /* Debug */,
+				C621578D1C73672100DA20E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C621578E1C73672100DA20E3 /* Build configuration list for PBXNativeTarget "iTao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C621578F1C73672100DA20E3 /* Debug */,
+				C62157901C73672100DA20E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C62157831C73672100DA20E3 /* iTao.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C62157841C73672100DA20E3 /* iTao.xcdatamodel */,
+			);
+			currentVersion = C62157841C73672100DA20E3 /* iTao.xcdatamodel */;
+			path = iTao.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C62157711C73672100DA20E3 /* Project object */;
+}
