@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import CoreData
 
-class tableVC: UITableViewController {
-
+class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
+    let context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var frc:NSFetchedResultsController = NSFetchedResultsController()
+    
+    func getFrc() -> NSFetchedResultsController {
+        frc = NSFetchedResultsController(fetchRequest: listFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        return frc
+    }
+    func listFetchRequest() -> NSFetchRequest {
+        let fetchRequest = NSFetchRequest(entityName: "List")
+        let sortDescriptor = NSSortDescriptor(key: "lTitle", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.reloadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        do {
+            frc = getFrc()
+            frc.delegate = self
+        try frc.performFetch()
+        } catch {
+            print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +47,27 @@ class tableVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        let numberofsections = (frc.sections?.count)!
+        return numberofsections
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        let numberOfRowsInSection = frc.sections![section].numberOfObjects
+        return numberOfRowsInSection
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let myList = frc.objectAtIndexPath(indexPath) as! List
+        cell.textLabel?.text = myList.lTitle
+        cell.detailTextLabel?.text = myList.lDesc
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -55,22 +77,21 @@ class tableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        do {
+            let managedObject:NSManagedObject = frc.objectAtIndexPath(indexPath) as! NSManagedObject
+            context.deleteObject(managedObject)
+            try context.save() } catch {
+                print(error)
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath)
     }
     */
 
@@ -82,14 +103,19 @@ class tableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "edit") {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let itemController:mainVC = segue.destinationViewController as! mainVC
+            let nItem:List = frc.objectAtIndexPath(indexPath!) as! List
+            itemController.nItem = nItem
+        }
     }
-    */
+    
 
 }

@@ -20,12 +20,56 @@ class mainVC: UIViewController {
     @IBOutlet weak var imgSnapshot: UIImageView!
     @IBOutlet weak var txtTitleOutlet: UITextField!
     
+    
+    @IBAction func btnCancelTapped(sender: AnyObject) {
+        dismissVC()
+    }
+    @IBAction func btnSaveTapped(sender: AnyObject) {
+        if (nItem != nil) {
+            self.editItem()
+        } else {
+            self.newItem()
+        }        
+        dismissVC()
+    }
+    
+    func dismissVC() {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    func newItem() {
+        do {
+        let context = self.context
+        let ent = NSEntityDescription.entityForName("List", inManagedObjectContext: context)
+        let sItem = List(entity:ent!, insertIntoManagedObjectContext:context)
+        sItem.lTitle = txtTitleOutlet.text
+        sItem.lDesc = txtDescriptionOutlet.text
+        try context.save()
+        } catch {
+            print(error)
+        }
+    }
+    
+    func editItem() {
+        do {
+        nItem?.lTitle = self.txtTitleOutlet.text
+        nItem?.lDesc = self.txtDescriptionOutlet.text
+        try context.save()
+        } catch {
+            print(error)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imgSnapshot.layer.cornerRadius = 5
+        self.imgSnapshot.layer.borderWidth = 3
         self.txtDescriptionOutlet.layer.cornerRadius = 5
+        self.txtDescriptionOutlet.layer.borderWidth = 1
+        
         if (nItem != nil) {
             self.txtTitleOutlet.text = nItem?.lTitle
+            self.txtDescriptionOutlet.text = nItem?.lDesc
             
         }
     }
