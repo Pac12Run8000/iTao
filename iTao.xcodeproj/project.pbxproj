@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C621577D1C73672100DA20E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577C1C73672100DA20E3 /* AppDelegate.swift */; };
-		C621577F1C73672100DA20E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577E1C73672100DA20E3 /* ViewController.swift */; };
+		C621577F1C73672100DA20E3 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577E1C73672100DA20E3 /* mainVC.swift */; };
 		C62157821C73672100DA20E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62157801C73672100DA20E3 /* Main.storyboard */; };
 		C62157851C73672100DA20E3 /* iTao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C62157831C73672100DA20E3 /* iTao.xcdatamodeld */; };
 		C62157871C73672100DA20E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62157861C73672100DA20E3 /* Assets.xcassets */; };
 		C621578A1C73672100DA20E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62157881C73672100DA20E3 /* LaunchScreen.storyboard */; };
+		C62157981C73EB9F00DA20E3 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157961C73EB9F00DA20E3 /* List+CoreDataProperties.swift */; };
+		C62157991C73EB9F00DA20E3 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62157971C73EB9F00DA20E3 /* List.swift */; };
+		C621579C1C73F24700DA20E3 /* tableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621579B1C73F24700DA20E3 /* tableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C62157791C73672100DA20E3 /* iTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621577C1C73672100DA20E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C621577E1C73672100DA20E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C621577E1C73672100DA20E3 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		C62157811C73672100DA20E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C62157841C73672100DA20E3 /* iTao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTao.xcdatamodel; sourceTree = "<group>"; };
 		C62157861C73672100DA20E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62157891C73672100DA20E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C621578B1C73672100DA20E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62157961C73EB9F00DA20E3 /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "List+CoreDataProperties.swift"; path = "../List+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C62157971C73EB9F00DA20E3 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../List.swift; sourceTree = "<group>"; };
+		C621579B1C73F24700DA20E3 /* tableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		C621577B1C73672100DA20E3 /* iTao */ = {
 			isa = PBXGroup;
 			children = (
+				C621579A1C73EBF700DA20E3 /* Supporting Files */,
 				C621577C1C73672100DA20E3 /* AppDelegate.swift */,
-				C621577E1C73672100DA20E3 /* ViewController.swift */,
+				C621577E1C73672100DA20E3 /* mainVC.swift */,
 				C62157801C73672100DA20E3 /* Main.storyboard */,
+				C621579B1C73F24700DA20E3 /* tableVC.swift */,
 				C62157861C73672100DA20E3 /* Assets.xcassets */,
 				C62157881C73672100DA20E3 /* LaunchScreen.storyboard */,
 				C621578B1C73672100DA20E3 /* Info.plist */,
 				C62157831C73672100DA20E3 /* iTao.xcdatamodeld */,
 			);
 			path = iTao;
+			sourceTree = "<group>";
+		};
+		C621579A1C73EBF700DA20E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C62157961C73EB9F00DA20E3 /* List+CoreDataProperties.swift */,
+				C62157971C73EB9F00DA20E3 /* List.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C621577F1C73672100DA20E3 /* ViewController.swift in Sources */,
+				C621577F1C73672100DA20E3 /* mainVC.swift in Sources */,
 				C62157851C73672100DA20E3 /* iTao.xcdatamodeld in Sources */,
 				C621577D1C73672100DA20E3 /* AppDelegate.swift in Sources */,
+				C62157991C73EB9F00DA20E3 /* List.swift in Sources */,
+				C62157981C73EB9F00DA20E3 /* List+CoreDataProperties.swift in Sources */,
+				C621579C1C73F24700DA20E3 /* tableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +275,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.iTao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -266,6 +287,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.iTao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
