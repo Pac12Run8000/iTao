@@ -36,6 +36,7 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
         try frc.performFetch()
         } catch {
             print(error)
+            return
         }
     }
 
@@ -62,9 +63,17 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
         let myList = frc.objectAtIndexPath(indexPath) as! List
         cell.textLabel?.text = myList.lTitle
         cell.detailTextLabel?.text = myList.lDesc
-
-        // Configure the cell...
-
+        
+        if (indexPath.row % 2 == 0) {
+                cell.backgroundColor = UIColor.clearColor()
+        } else {
+            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+        }
+        cell.textLabel?.textColor = UIColor.darkGrayColor()
+        cell.detailTextLabel?.textColor = UIColor.darkGrayColor()
+        //cell.imageView?.image = UIImage(data: (myList.lImage)!)
         return cell
     }
     
@@ -85,6 +94,7 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
             context.deleteObject(managedObject)
             try context.save() } catch {
                 print(error)
+                return
         }
     }
     

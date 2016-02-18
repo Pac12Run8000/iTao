@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
     <entity name="List" representedClassName=".List" syncable="YES">
         <attribute name="lDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="lImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="lTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lVideo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
