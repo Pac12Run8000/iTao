@@ -19,8 +19,13 @@ class mainVC: UIViewController {
     @IBOutlet weak var txtDescriptionOutlet: UITextView!
     @IBOutlet weak var imgSnapshot: UIImageView!
     @IBOutlet weak var txtTitleOutlet: UITextField!
+    // 103:11 in tutorial
+    @IBAction func addImages(sender: AnyObject) {
+    }
     
-    
+    @IBAction func addImagesFromCamera(sender: AnyObject) {
+        
+    }
     @IBAction func btnCancelTapped(sender: AnyObject) {
         dismissVC()
     }
@@ -29,7 +34,7 @@ class mainVC: UIViewController {
             self.editItem()
         } else {
             self.newItem()
-        }        
+        }
         dismissVC()
     }
     

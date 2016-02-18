@@ -109,7 +109,17 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="camera" id="UOh-fX-Wdh"/>
+                        <barButtonItem systemItem="camera" id="UOh-fX-Wdh">
+                            <connections>
+                                <action selector="addImagesFromCamera:" destination="BYZ-38-t0r" id="L9F-2W-CVS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="37" style="plain" systemItem="fixedSpace" id="YDp-Dg-WQc"/>
+                        <barButtonItem systemItem="organize" id="2Di-hu-LmV">
+                            <connections>
+                                <action selector="addImages:" destination="BYZ-38-t0r" id="cVy-Am-YUo"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="zaF-vk-rND">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KwP-N0-qdp">
@@ -137,13 +147,17 @@
         <!--Navigation Controller-->
         <scene sceneID="A4E-g0-1n3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LT3-nX-nLT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="LT3-nX-nLT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gBQ-b1-Kap">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8Bc-5i-9jL">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="axf-UV-ijY" kind="relationship" relationship="rootViewController" id="d3g-fh-Cdi"/>
                     </connections>
