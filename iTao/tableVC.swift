@@ -23,10 +23,13 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
     }
+    
+    // This reloads the tableview to see the new data added
+    // You can do the same thing with view did appear
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.reloadData()
-        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,9 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
             print(error)
             return
         }
+        self.tableView.rowHeight = 60
+        //self.tableView.backgroundView = UIImageView(image: UIImage(named: "orange-bg"))
+        //self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

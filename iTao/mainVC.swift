@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class mainVC: UIViewController {
+class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var nItem : List? = nil
@@ -21,9 +21,26 @@ class mainVC: UIViewController {
     @IBOutlet weak var txtTitleOutlet: UITextField!
     // 103:11 in tutorial
     @IBAction func addImages(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        pickerController.allowsEditing = true
+        self.presentViewController(pickerController, animated: true, completion: nil)
+    }
+    
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.imgSnapshot.image = image
     }
     
     @IBAction func addImagesFromCamera(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        pickerController.allowsEditing = true
+        self.presentViewController(pickerController, animated: true, completion: nil)
         
     }
     @IBAction func btnCancelTapped(sender: AnyObject) {
@@ -42,32 +59,39 @@ class mainVC: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     func newItem() {
-        do {
+        
         let context = self.context
         let ent = NSEntityDescription.entityForName("List", inManagedObjectContext: context)
         let sItem = List(entity:ent!, insertIntoManagedObjectContext:context)
         sItem.lTitle = txtTitleOutlet.text
         sItem.lDesc = txtDescriptionOutlet.text
+        sItem.lImage = UIImagePNGRepresentation(self.imgSnapshot.image!)
+        do {
         try context.save()
         } catch {
             print(error)
+            return
         }
     }
     
     func editItem() {
-        do {
+        
         nItem?.lTitle = self.txtTitleOutlet.text
         nItem?.lDesc = self.txtDescriptionOutlet.text
+        nItem?.lImage = UIImagePNGRepresentation(self.imgSnapshot.image!)
+        do {
         try context.save()
         } catch {
             print(error)
+            return
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imgSnapshot.layer.cornerRadius = 5
+        self.imgSnapshot.layer.cornerRadius = 9
+        self.imgSnapshot.clipsToBounds = true
         self.imgSnapshot.layer.borderWidth = 3
         self.txtDescriptionOutlet.layer.cornerRadius = 5
         self.txtDescriptionOutlet.layer.borderWidth = 1
