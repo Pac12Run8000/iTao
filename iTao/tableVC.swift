@@ -42,6 +42,7 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
             return
         }
         self.tableView.rowHeight = 60
+        
         //self.tableView.backgroundView = UIImageView(image: UIImage(named: "orange-bg"))
         //self.tableView.reloadData()
     }
@@ -79,8 +80,34 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
         }
         cell.textLabel?.textColor = UIColor.darkGrayColor()
         cell.detailTextLabel?.textColor = UIColor.darkGrayColor()
+        if (myList.lImage != nil) {
+            
+            
+            
+            cell.imageView?.image = UIImage(data: (myList.lImage)!)
+            cell.imageView?.layer.cornerRadius = 20
+            cell.imageView?.layer.borderWidth = 1
+            //cell.imageView?.layer.cornerRadius = ((cell.imageView?.frame.size.height)! / 2)
+            cell.imageView?.clipsToBounds = true
+            
+        
+        }
         //cell.imageView?.image = UIImage(data: (myList.lImage)!)
         return cell
+    }
+    
+    func roundImage(image: UIImage, toTheSize size: CGSize) -> UIImage {
+        let scale = CGFloat(max(size.width/image.size.width, size.height/image.size.height))
+        let width:CGFloat = image.size.width * scale
+        let height:CGFloat = image.size.height * scale
+        
+        let rr:CGRect = CGRectMake(0, 0, width, height)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        image.drawInRect(rr)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
 

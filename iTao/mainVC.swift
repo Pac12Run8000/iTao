@@ -99,7 +99,7 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         if (nItem != nil) {
             self.txtTitleOutlet.text = nItem?.lTitle
             self.txtDescriptionOutlet.text = nItem?.lDesc
-            
+            self.imgSnapshot.image = UIImage(data: (nItem?.lImage)!)
         }
     }
 
