@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09E1BFA11C7923A3000AD864 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1BFA01C7923A3000AD864 /* AVFoundation.framework */; };
-		09E1BFA31C7923B4000AD864 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1BFA21C7923B4000AD864 /* AVKit.framework */; };
 		C621577D1C73672100DA20E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577C1C73672100DA20E3 /* AppDelegate.swift */; };
 		C621577F1C73672100DA20E3 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621577E1C73672100DA20E3 /* mainVC.swift */; };
 		C62157821C73672100DA20E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62157801C73672100DA20E3 /* Main.storyboard */; };
@@ -21,8 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09E1BFA01C7923A3000AD864 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		09E1BFA21C7923B4000AD864 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C62157791C73672100DA20E3 /* iTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621577C1C73672100DA20E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C621577E1C73672100DA20E3 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
@@ -41,8 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E1BFA31C7923B4000AD864 /* AVKit.framework in Frameworks */,
-				09E1BFA11C7923A3000AD864 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +46,6 @@
 		C62157701C73672100DA20E3 = {
 			isa = PBXGroup;
 			children = (
-				09E1BFA21C7923B4000AD864 /* AVKit.framework */,
-				09E1BFA01C7923A3000AD864 /* AVFoundation.framework */,
 				C621577B1C73672100DA20E3 /* iTao */,
 				C621577A1C73672100DA20E3 /* Products */,
 			);
