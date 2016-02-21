@@ -10,7 +10,11 @@ import UIKit
 import CoreData
 
 
+
 class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
+   
+    
     
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var nItem : List? = nil
@@ -27,7 +31,6 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         pickerController.allowsEditing = true
         self.presentViewController(pickerController, animated: true, completion: nil)
     }
-    
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
@@ -95,6 +98,7 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         self.imgSnapshot.layer.borderWidth = 3
         self.txtDescriptionOutlet.layer.cornerRadius = 5
         self.txtDescriptionOutlet.layer.borderWidth = 1
+       
         
         if (nItem != nil) {
             self.txtTitleOutlet.text = nItem?.lTitle
