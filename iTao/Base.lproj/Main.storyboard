@@ -164,7 +164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHC-wC-AAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-359" y="85"/>
+            <point key="canvasLocation" x="-561" y="-169"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

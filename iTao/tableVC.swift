@@ -25,7 +25,7 @@ class tableVC: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     // This reloads the tableview to see the new data added
-    // You can do the same thing with view did appear
+    // You can do the same thing with viewDidAppear
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.reloadData()
     }
