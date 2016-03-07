@@ -68,7 +68,9 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         let sItem = List(entity:ent!, insertIntoManagedObjectContext:context)
         sItem.lTitle = txtTitleOutlet.text
         sItem.lDesc = txtDescriptionOutlet.text
+        if (self.imgSnapshot.image != nil) {
         sItem.lImage = UIImagePNGRepresentation(self.imgSnapshot.image!)
+        }
         do {
         try context.save()
         } catch {
@@ -81,7 +83,9 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         
         nItem?.lTitle = self.txtTitleOutlet.text
         nItem?.lDesc = self.txtDescriptionOutlet.text
-        nItem?.lImage = UIImagePNGRepresentation(self.imgSnapshot.image!)
+        if (self.imgSnapshot.image != nil) {
+            nItem?.lImage = UIImagePNGRepresentation(self.imgSnapshot.image!)
+        }
         do {
         try context.save()
         } catch {
@@ -103,7 +107,9 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         if (nItem != nil) {
             self.txtTitleOutlet.text = nItem?.lTitle
             self.txtDescriptionOutlet.text = nItem?.lDesc
-            self.imgSnapshot.image = UIImage(data: (nItem?.lImage)!)
+            if (nItem?.lImage != nil) {
+                self.imgSnapshot.image = UIImage(data: (nItem?.lImage)!)
+            }
         }
     }
 
