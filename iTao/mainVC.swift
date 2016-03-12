@@ -32,7 +32,10 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         self.presentViewController(pickerController, animated: true, completion: nil)
     }
     
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         self.dismissViewControllerAnimated(true, completion: nil)
         self.imgSnapshot.image = image
@@ -100,8 +103,15 @@ class mainVC: UIViewController, NSFetchedResultsControllerDelegate, UIImagePicke
         self.imgSnapshot.layer.cornerRadius = 9
         self.imgSnapshot.clipsToBounds = true
         self.imgSnapshot.layer.borderWidth = 3
+        self.imgSnapshot.layer.borderColor = UIColor.whiteColor().CGColor
+        
         self.txtDescriptionOutlet.layer.cornerRadius = 5
-        self.txtDescriptionOutlet.layer.borderWidth = 1
+        self.txtDescriptionOutlet.layer.borderWidth = 3
+        self.txtDescriptionOutlet.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        self.txtTitleOutlet.layer.cornerRadius = 5
+        self.txtTitleOutlet.layer.borderWidth = 3
+        self.txtTitleOutlet.layer.borderColor = UIColor.whiteColor().CGColor
        
         
         if (nItem != nil) {
